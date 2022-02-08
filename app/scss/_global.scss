@@ -1,0 +1,20 @@
+.body {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.conntainer {
+    margin: 0 auto;
+    max-width: 1260px;
+    padding: 0 20px;
+}
+
+.logo {
+    &__img {
+        background-image: url(../images/logo-img.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
