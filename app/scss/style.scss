@@ -5,10 +5,10 @@
 .header {
     background: linear-gradient(
             180deg,
-            #000000 5.58%,
-            rgba(0, 0, 0, 0.35) 31.25%,
-            rgba(0, 0, 0, 0.46) 61.61%,
-            rgba(0, 0, 0, 0.47) 76.69%,
+            #000000 3%,
+            rgba(0, 0, 0, 0.4) 35.7%,
+            rgba(0, 0, 0, 0.05) 61%,
+            rgba(0, 0, 0, 0.47) 80%,
             #000000 100%
         ),
         url(../images/header-bg.jpg);
@@ -45,6 +45,10 @@
         align-items: center;
     }
 
+    &__item {
+        position: relative;
+    }
+
     &__item,
     &__enter {
         color: #fff;
@@ -54,6 +58,25 @@
 
     &__item:not(:last-child) {
         margin-right: 40px;
+    }
+
+    &__item::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        bottom: -5px;
+        left: 50%;
+        border-radius: 3px;
+        background-color: transparent;
+        transition: background-color 0.3s, left 0.3s, width 0.3s;
+    }
+
+    &__item:hover::after {
+        width: 100%;
+        left: 0;
+
+        background-color: #fff;
     }
 
     &__content {
