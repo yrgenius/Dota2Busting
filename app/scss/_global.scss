@@ -1,7 +1,9 @@
-.body {
+body {
     color: #fff;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
+    background: #000;
+    font-family: "Roboto", sans-serif;
 }
 
 .conntainer {
@@ -11,11 +13,32 @@
 }
 
 .logo {
-    &__link {}
+    &__link {
+        display: block;
+        position: relative;
+        width: 177px;
+        height: 93px;
+    }
     &__img {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 8px;
+        left: 0;
         background-image: url(../images/logo-img.svg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
     }
+}
+
+button {
+    border: 3px solid #fff;
+    border-radius: 81px;
+    padding: 14px 70px;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #fff;
 }

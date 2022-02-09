@@ -1,43 +1,82 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
 .header {
-    .conntainer {
-        min-height: 100vh;
-    }
-    background: linear-gradient(180deg, #000000 5.58%, rgba(0, 0, 0, 0.35) 31.25%, rgba(0, 0, 0, 0.46) 61.61%, rgba(0, 0, 0, 0.47) 76.69%, #000000 100%),
-    url(../images/header-bg.jpg);
+    background: linear-gradient(
+            180deg,
+            #000000 5.58%,
+            rgba(0, 0, 0, 0.35) 31.25%,
+            rgba(0, 0, 0, 0.46) 61.61%,
+            rgba(0, 0, 0, 0.47) 76.69%,
+            #000000 100%
+        ),
+        url(../images/header-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
+    text-align: center;
+
+    & .conntainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-height: 100vh;
+    }
+
     &__top {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: start;
         align-items: center;
         width: 100%;
+        padding-top: 30px;
     }
+
+    &__menu {
+        flex-grow: 1;
+        margin-right: 23px;
+    }
+
     &__items {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
     }
+
     &__item,
     &__enter {
         color: #fff;
         text-transform: uppercase;
         cursor: pointer;
     }
+
     &__item:not(:last-child) {
         margin-right: 40px;
     }
-    &__enter {
-        border: 3px solid #fff;
-        border-radius: 81px;
-        padding: 14px 70px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    &__title {
+        justify-self: center;
+        font-size: 41px;
+        text-transform: uppercase;
+        max-width: 490px;
+        color: #fff;
+        margin: 0 auto 11px;
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        margin-bottom: 42px;
     }
 }
 
-@import 'media';
+@import "media";
