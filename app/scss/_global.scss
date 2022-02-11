@@ -1,6 +1,6 @@
 body {
     color: #fff;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 400;
     background: #000;
     font-family: "Roboto", sans-serif;
@@ -33,6 +33,15 @@ body {
     }
 }
 
+.title {
+    font-family: "Roboto", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 button {
     border: 3px solid #fff;
     border-radius: 81px;
@@ -43,7 +52,6 @@ button {
     background-color: transpaernt;
     color: #fff;
     transition: color 0.3s, background-color 0.3s;
-
     &:hover,
     &:focus {
         background: #fff;

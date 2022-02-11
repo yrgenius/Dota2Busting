@@ -3,27 +3,17 @@
 @import "reset";
 @import "global";
 .header {
-    background: linear-gradient(
-            180deg,
-            #000000 3%,
-            rgba(0, 0, 0, 0.4) 35.7%,
-            rgba(0, 0, 0, 0.05) 61%,
-            rgba(0, 0, 0, 0.47) 80%,
-            #000000 100%
-        ),
-        url(../images/header-bg.jpg);
+    background: linear-gradient( 180deg, #000000 3%, rgba(0, 0, 0, 0.4) 35.7%, rgba(0, 0, 0, 0.05) 61%, rgba(0, 0, 0, 0.47) 80%, #000000 100%), url(../images/header-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     text-align: center;
-
     & .container {
         display: flex;
         flex-direction: column;
         justify-content: start;
         min-height: 100vh;
     }
-
     &__top {
         display: flex;
         flex-wrap: wrap;
@@ -32,34 +22,28 @@
         width: 100%;
         padding-top: 30px;
     }
-
     &__menu {
         flex-grow: 1;
         margin-right: 23px;
     }
-
     &__items {
         display: flex;
         flex-wrap: wrap;
         justify-content: end;
         align-items: center;
     }
-
     &__item {
         position: relative;
     }
-
     &__item,
     &__enter {
         color: #fff;
         text-transform: uppercase;
         cursor: pointer;
     }
-
     &__item:not(:last-child) {
         margin-right: 40px;
     }
-
     &__item::after {
         content: "";
         position: absolute;
@@ -71,14 +55,11 @@
         background-color: transparent;
         transition: background-color 0.3s, left 0.3s, width 0.3s;
     }
-
     &__item:hover::after {
         width: 100%;
         left: 0;
-
         background-color: #fff;
     }
-
     &__content {
         display: flex;
         flex-direction: column;
@@ -86,7 +67,6 @@
         align-items: center;
         flex-grow: 1;
     }
-
     &__title {
         justify-self: center;
         font-size: 41px;
@@ -95,44 +75,39 @@
         color: #fff;
         margin: 0 auto 11px;
     }
-
     &__subtitle {
         font-size: 22px;
         margin-bottom: 42px;
     }
 }
 
-.rangup {
+.offer {
     &__wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     &__content {
         margin-right: 65px;
+        width: 55%;
         max-width: 470px;
         text-align: center;
     }
-
     &__title {
         margin-bottom: 38px;
     }
-
     &__text {
         margin-bottom: 37px;
+        font-size: 18px;
     }
-
     &__items {
         margin-top: 37px;
         display: flex;
         justify-content: center;
     }
-
     &__item {
         padding-top: 63px;
         position: relative;
-
         &::after {
             content: "";
             position: absolute;
@@ -144,29 +119,65 @@
             background-position: top center;
         }
     }
-
     &__item:nth-child(1) {
         max-width: 135px;
-
         &::after {
             background-image: url(../images/heart-shape.svg);
         }
     }
-
     &__item:nth-child(2) {
         max-width: 200px;
-
         &::after {
             background: top center no-repeat url(../images/lightning-bolt.svg);
         }
     }
-
     &__item:nth-child(3)::after {
         background: top center no-repeat url(../images/shield.svg);
     }
-
     &__item:not(:last-child) {
         margin-right: 20px;
+    }
+}
+
+.about {
+    &__title {
+        margin: 175px 0 150px;
+    }
+    &__content:not(:last-child) {
+        margin-bottom: 45px;
+    }
+    &__content-title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 4px;
+    }
+    &__text {
+        font-size: 21px;
+    }
+    &__signature {
+        font-size: 18px;
+        text-align: right;
+    }
+}
+
+.warranty {
+    &__title {
+        margin: 175px 0 150px;
+    }
+    &__content:not(:last-child) {
+        margin-bottom: 45px;
+    }
+    &__content-title {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 21px;
+    }
+    &__text {
+        margin-left: 27px;
+        padding-bottom: 10px;
+        font-size: 21px;
     }
 }
 
