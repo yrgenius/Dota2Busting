@@ -13,12 +13,11 @@ body {
 }
 
 .logo {
-    &__link {
-        display: block;
-        position: relative;
-        width: 177px;
-        height: 93px;
-    }
+    display: block;
+    position: relative;
+    width: 177px;
+    height: 93px;
+
     &__img {
         display: block;
         position: absolute;
